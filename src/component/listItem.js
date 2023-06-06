@@ -1,20 +1,22 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import { useDrag, useDrop } from "react-dnd";
+import RightSide from "./rightSide";
 const ListItem = ({ id, name }) => {
-  
-const [{isDragging},drag] = useDrag(()=>({
-type:"input",
-item:{id:id},
-collect:(monitor)=>({
-  isDragging:!!monitor.isDragging(),
-})
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: "input",
+    item: { id: id },
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(name),
+    }),
+  }));
 
-}));
+
   return (
     <>
-      <ul>
-        <li ref={drag}>{name}</li>
-      </ul>{" "}
+      <Typography ref={drag} variant="body2">
+        {name}
+      </Typography>
     </>
   );
 };

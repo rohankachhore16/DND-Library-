@@ -1,17 +1,19 @@
 export const inputList =[{
   id:"1",
-  name:"text",
+  name:"Text",
 
 },{
   id:"2",
-  name:"radio"
+  name:"Radio"
 },
+
 {
   id:"3",
-  name:"select",
-
+  name:"Textarea"
 },
 {
   id:"4",
-  name:"textarea"
-}]
+  name:"Select",
+
+},
+]
